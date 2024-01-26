@@ -15,9 +15,12 @@
     <section class="input-container">
         <div class="input-container__entry-area">
             <input class="input-container__entry" type="text" name="entry" id="entry" required>
-            <div class="input-container__label">Check for a palindrome</div>
+            <div id="label" class="input-container__label"></div>
         </div>
-        <button id="checkButton" class="input-container__button">Check</button>
+        <button id="checkButton" class="input-container__button button--hover">Check</button>
+        <div class="input-container__result-div">
+            <span id="result" class="input-container__result-text"></span>
+        </div>
     </section>
 
     <section id="definition-trigger" class="definition-container">
