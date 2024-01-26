@@ -5,17 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
     <title>Palindrome Checker | freeCodeCamp</title>
 </head>
 <body>
-    <div class="container">
-        <div class="entry-area">
-            <input type="text" name="" id="" required>
-            <div class="label">Check for a palindrome</div>
+    <section class="input-container">
+        <div class="input-container__entry-area">
+            <input class="input-container__entry" type="text" name="entry" id="entry" required>
+            <div class="input-container__label">Check for a palindrome</div>
         </div>
-    </div>
+    </section>
+
+    <section class="definition-container">
+        <span>
+            <lord-icon
+                class="definition-container__icon"
+                id="icon"
+                src="https://cdn.lordicon.com/axteoudt.json"
+                trigger="hover"
+                state="hover-help-center-2"
+                colors="primary:#f0ffff"
+                style="width:50px;height:50px">
+            </lord-icon>
+        </span>
+        <div class="definition-container__definition">
+            <span class="definition-container__animated-text"></span>
+        </div>
+    </section>
 </body>
 </html>
