@@ -74,6 +74,12 @@ body {
     transition: 0.1s ease;
 }
 
+/* label: error animation */
+
+.label--error {
+    animation: error .3s 3;
+} 
+
 /* check button */
 
 .input-container__button {
@@ -86,7 +92,7 @@ body {
     text-align: center;
     font-size: 1.6em;
     font-family: inherit;
-    color: var(--cc-lightGreen);
+    color: var(--primary-white);
     cursor: pointer;
     transition: all 0.6s ease;
     z-index: 1;
@@ -121,16 +127,67 @@ body {
     z-index: -1;
 }
 
-.input-container__button:hover::after {
+.button--hover:hover::after {
     background-color: #ffffff31;
     transform: skew(20deg, 0deg);
     left: calc(105%);
 }
 
-.input-container__button:hover::before {
+.button--hover:hover::before {
     background-color: var(--cc-darkGreen);
     border: 3px solid var(--cc-lightGreen);
     transform: skew(20deg, 0deg) scale(1.1)
+}
+
+/* check button: error animation */
+
+.button--error {
+    animation: error .3s 250ms 2;
+}
+
+.button--error::before {
+    animation: error .3s 3;
+}
+
+@keyframes error {
+    0% {
+        color: var(--primary-white);
+        border-color: var(--primary-white);
+    }
+
+    100% {
+        color: red;
+        border-color: red;
+    }
+}
+
+/* RESULT */
+
+.input-container__result-div {
+    margin-top: 30px;
+    text-align: center;
+} 
+
+.input-container__result-text {
+    display: none;
+    font-size: 1.6em;
+    user-select: none;
+    letter-spacing: 8px;
+    line-height: 30px;
+    font-weight: 400;
+    color: var(--primary-white);
+    border-right: 2px solid var(--cc-lightGreen);
+    animation: cursor .8s infinite;
+}
+
+/* is-palindrome */
+.is-green {
+    color: var(--cc-lightGreen);
+}
+
+/* result: false */
+.not-palindrome {
+    color: red;
 }
 
 /* DEFINITION-BOX */
