@@ -8,28 +8,32 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
 body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     min-height: 100vh;
     background: var(--bg-color);
+    font-family: 'Orbitron', sans-serif;
 }
 
-.container {
+/* ENTRY BOX */
+
+.input-container {
+    margin-bottom: 50px;
     width: 680px;
 }
 
-.entry-area {
+.input-container__entry-area {
     position: relative;
     height: 80px;
     line-height: 80px;
 }
 
-input {
+.input-container__entry {
     position: absolute;
     width: 100%;
     outline: none;
@@ -43,14 +47,14 @@ input {
     z-index: 101;
 }
 
-input:focus,
-input:valid {
+.input-container__entry:focus,
+.input-container__entry:valid {
     color: var(--secondary-font);
     border: 4px solid var(--secondary-font);
 } 
 
-input:focus + .label,
-input:valid + .label {
+.input-container__entry:focus + .input-container__label,
+.input-container__entry:valid + .input-container__label {
     color: var(--secondary-font);
     height: 30px;
     line-height: 30px;
@@ -59,7 +63,7 @@ input:valid + .label {
     z-index: 101;
 } 
 
-.label {
+.input-container__label {
     position: absolute;
     font-size: 1.6em;
     color: var(--primary-white);
@@ -68,3 +72,47 @@ input:valid + .label {
     background-color: var(--bg-color);
     transition: 0.1s ease;
 }
+
+/* DEFINITION */
+
+.definition-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+}
+
+.definition-container__icon {
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.definition-container__icon:hover {
+    scale: 1.2;
+}
+
+.definition-container__definition {
+    display: inline;
+    text-align: center;
+}
+
+.definition-container__animated-text {
+    width: 100%;
+    font-size: 1.1em;
+    text-align: center;
+    vertical-align: middle;
+    letter-spacing: 10px;
+    line-height: 30px;
+    font-weight: 400;
+    color: var(--primary-white);
+    border-right: 2px solid #ff7f50;
+    animation: 
+        cursor .8s infinite;
+}
+
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
