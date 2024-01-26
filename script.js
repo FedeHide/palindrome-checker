@@ -1,3 +1,5 @@
+const label = document.getElementById('label');
+const result = document.getElementById('result');
 const definitionTrigger = document.getElementById('definition-trigger');
 const icon = document.getElementById('icon');
 const animatedText = document.querySelector('.definition-container__animated-text');
@@ -6,7 +8,10 @@ const definition = "A palindrome is a word or sentence that's spelled the same w
 
 const userInput = document.getElementById('entry');
 const checkButton = document.getElementById('checkButton');
-// const resultText = document.getElementById('');
+
+let labelText = 'Check for a palindrome';
+label.textContent = labelText;
+let labelError = 'Input a text';
 
 /*
 * This function adds a typing effect, pushing a text letter by letter with a minimum delay.
@@ -49,15 +54,49 @@ function checkForPalindrome (input) {
 
     // ! alert error on empty input
     if (input === '') {
-        alert('Please input a valid text');
+        result.style.display = 'none';
+        checkButton.classList.add('button--error');
+        label.classList.add('label--error');
+        checkButton.classList.remove('button--hover');
+        label.textContent = labelError;
+        setTimeout(() => {
+            checkButton.classList.remove('button--error');
+            checkButton.classList.add('button--hover');
+            label.classList.remove('label--error');
+            label.textContent = labelText;
+        }, 1000);
         return
     }
 
-    // * remove special characters and spaces from input and palindrome validation.
+    // * remove special characters and spaces from input.
     const cleanInput = input.replace(/[^a-zA-Z]/g, '').toLowerCase();
-    cleanInput === [...cleanInput].reverse().join('') ? console.log('yes') : console.log('no');
+
+    result.style.display = 'inline';
+
+    // * Palindrome validation showing text when is <= 10 char. or defaul text.
+    if (cleanInput.length <= 20) {
+        cleanInput === [...cleanInput].reverse().join('') 
+        ? textTypingEffect(result, `${input} IS a palindrome`) 
+        : textTypingEffect(result, `${input} is NOT a palindrome`);
+    } else {
+        cleanInput === [...cleanInput].reverse().join('') 
+        ? textTypingEffect(result, `Your text IS a palindrome`) 
+        : textTypingEffect(result, `Your text is NOT a palindrome`);
+    }
 }
 
+// * Trigger function on click.
 checkButton.addEventListener('click', () => {
+    result.textContent = '';
     checkForPalindrome(userInput.value);
 })
+
+// * Trigger function on enter.
+userInput.addEventListener('keydown', e => {
+    if (e.key === 'Enter') {
+        result.textContent = '';
+        e.preventDefault();
+        checkForPalindrome(userInput.value);
+    }
+});
+
