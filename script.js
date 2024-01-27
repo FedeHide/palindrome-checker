@@ -1,13 +1,13 @@
 const label = document.getElementById('label');
-const result = document.getElementById('result');
+const result = document.getElementById('text-result');
 const definitionTrigger = document.getElementById('definition-trigger');
 const icon = document.getElementById('icon');
 const animatedText = document.querySelector('.definition-container__animated-text');
 const interrogant = "What is a palindrome?";
 const definition = "A palindrome is a word or sentence that's spelled the same way both forward and backward, ignoring punctuation, case, and spacing";
 
-const userInput = document.getElementById('entry');
-const checkButton = document.getElementById('checkButton');
+const userInput = document.getElementById('text-input');
+const checkButton = document.getElementById('check-btn');
 
 let labelText = 'Check for a palindrome';
 label.textContent = labelText;
@@ -69,11 +69,11 @@ function checkForPalindrome (input) {
     }
 
     // * remove special characters and spaces from input.
-    const cleanInput = input.replace(/[^a-zA-Z]/g, '').toLowerCase();
+    const cleanInput = input.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
 
     result.style.display = 'inline';
 
-    // * Palindrome validation showing text when is <= 10 char. or defaul text.
+    // * Palindrome validation showing text when is <= 20 char. or defaul text.
     if (cleanInput.length <= 20) {
         cleanInput === [...cleanInput].reverse().join('') 
         ? textTypingEffect(result, `${input} IS a palindrome`) 
