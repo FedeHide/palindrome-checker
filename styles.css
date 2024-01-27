@@ -1,8 +1,9 @@
 :root {
     --bg-color: #1c2841;
-    --primary-white: #f0ffff;
+    --primary-white: #fff3f0;
     --cc-lightGreen: #66ff00; 
     --cc-darkGreen: #4db209; 
+    --cc-error: #b92d2d;
 }
 
 * {
@@ -136,7 +137,7 @@ body {
 .button--hover:hover::before {
     background-color: var(--cc-darkGreen);
     border: 3px solid var(--cc-lightGreen);
-    transform: skew(20deg, 0deg) scale(1.1)
+    transform: skew(20deg, 0deg) scale(1.1);
 }
 
 /* check button: error animation */
@@ -156,8 +157,8 @@ body {
     }
 
     100% {
-        color: red;
-        border-color: red;
+        color: var(--cc-error);
+        border-color: var(--cc-error);
     }
 }
 
@@ -178,16 +179,6 @@ body {
     color: var(--primary-white);
     border-right: 2px solid var(--cc-lightGreen);
     animation: cursor .8s infinite;
-}
-
-/* is-palindrome */
-.is-green {
-    color: var(--cc-lightGreen);
-}
-
-/* result: false */
-.not-palindrome {
-    color: red;
 }
 
 /* DEFINITION-BOX */
@@ -275,3 +266,82 @@ body {
     }
 }
 
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 760px) {
+    .input-container {
+        width: 380px;
+        margin-bottom: 25px;
+    }
+
+    .input-container__entry {
+        font-size: 1.6em;
+    }
+
+    .input-container__label,
+    .input-container__button {
+        font-size: 1.1em;
+    }
+
+    .input-container__result-text {
+        font-size: 0.9em;
+    }
+
+    .button--hover:hover::after {
+        left: calc(101%);
+    }
+
+    .button--hover:hover::before {
+        transform: skew(20deg, 0deg);
+    }
+
+    .definition-container {
+        max-width: 380px;
+    }
+
+    .definition-container__definition {
+        max-width: 80%;
+    }
+
+    .definition-container__icon {
+        margin-right: 0;
+        transform: scale(0.8);
+    } 
+
+    .definition-container__animated-text {
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .input-container {
+        width: 280px;
+        margin-bottom: 50px;
+    }
+
+    .input-container__entry-area {
+        height: 20px;
+    }
+
+    .input-container__entry {
+        font-size: 1em;
+    }
+
+    .input-container__label,
+    .input-container__button {
+        font-size: 0.8em;
+    }
+
+    .input-container__button {
+        margin-top: 100px;
+    }
+
+    .definition-container__icon {
+        transform: scale(0.6);
+    } 
+
+    .definition-container__animated-text {
+        font-size: 0.7em;
+        letter-spacing: 5px;
+    }
+}
