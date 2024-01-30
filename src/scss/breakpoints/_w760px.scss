@@ -1,0 +1,68 @@
+@media screen and (max-width: 760px) {
+    /* INPUT SECTION */
+    .input-container {
+        width: 380px;
+        margin-bottom: 25px;
+
+        /* ENTRY BOX */
+        &__entry {
+            font-size: var(--fs-500);
+        }
+    
+        &__label,
+        &__button {
+            font-size: var(--fs-400);
+        }
+    
+        /* RESULT */
+        &__result-text {
+            font-size: var(--fs-300);
+        }
+    }
+
+    /* check button */
+    @media screen and (hover: hover) {
+        .button--hover {
+            &:hover::after {
+                left: calc(101%);
+            }
+    
+            &:hover::before {
+                transform: skew(20deg, 0deg);
+            }
+        }
+    }
+
+    @media screen and (hover: none) {
+        .button--hover {
+            &:active::after {
+                left: calc(0%);
+                background-color: #ffffff31;
+            }
+    
+            &:active::before {
+                transform: skew(20deg, 0deg);
+            }
+        }
+    }
+
+    /* DEFINITION-BOX */
+    .definition-container {
+        max-width: 380px;
+        
+        /* definition */
+        &__definition {
+            max-width: 80%;
+        }
+    
+        &__animated-text {
+            font-size: var(--fs-200);
+        }
+    
+        /* icon */
+        &__icon {
+            margin-right: 0;
+            transform: scale(0.8);
+        } 
+    }
+}

@@ -13,9 +13,6 @@ let labelText = "Check for a palindrome";
 if (elements.label)
     elements.label.textContent = labelText;
 let labelError = "Input a text";
-/*
-* This function adds a typing effect, pushing a text letter by letter with a minimum delay.
-*/
 function textTypingEffect(e, text, i = 0) {
     if (e) {
         e.textContent += text[i];
@@ -28,9 +25,6 @@ function textTypingEffect(e, text, i = 0) {
     }
 }
 textTypingEffect(elements.animatedText, labelText);
-/*
-* This function cleans content and pushes a new text. Takes off icon, text animation, pointer and remove listener.
-*/
 function clickHandler() {
     if (elements.animatedText && elements.icon && elements.definitionTrigger) {
         elements.animatedText.textContent = "";
@@ -43,12 +37,8 @@ function clickHandler() {
 }
 if (elements.definitionTrigger)
     elements.definitionTrigger.addEventListener('click', clickHandler);
-/*
-* This function checks if the user's input is a palindome or not.
-*/
 function checkForPalindrome(input) {
     if (elements.result && elements.checkButton && elements.label) {
-        // ! alert error on empty input
         if (input === '') {
             elements.result.style.display = 'none';
             elements.checkButton.classList.add('button--error');
@@ -66,11 +56,9 @@ function checkForPalindrome(input) {
             return;
         }
     }
-    // * remove special characters and spaces from input.
     const cleanInput = input.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
     if (elements.result)
         elements.result.style.display = 'inline';
-    // * Palindrome validation showing text when is <= 20 char. or defaul text.
     const reversedInput = cleanInput.split('').reverse().join('');
     const palindromeMessage = cleanInput === reversedInput ? `${input} IS a palindrome` : `${input} is NOT a palindrome`;
     const defaultPalindromeMessage = cleanInput === reversedInput ? `Your text IS a palindrome` : `Your text is NOT a palindrome`;
@@ -81,7 +69,6 @@ function checkForPalindrome(input) {
         textTypingEffect(elements.result, defaultPalindromeMessage);
     }
 }
-// * Trigger function on click.
 if (elements.checkButton) {
     elements.checkButton.addEventListener('click', () => {
         if (elements.result && elements.userInput) {
@@ -90,7 +77,6 @@ if (elements.checkButton) {
         }
     });
 }
-// * Trigger function on enter.
 if (elements.userInput) {
     elements.userInput.addEventListener('keydown', e => {
         if (e.key === 'Enter') {
@@ -102,3 +88,4 @@ if (elements.userInput) {
         }
     });
 }
+//# sourceMappingURL=main.js.map
