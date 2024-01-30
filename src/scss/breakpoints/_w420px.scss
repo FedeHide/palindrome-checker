@@ -1,0 +1,35 @@
+
+@media screen and (max-width: 420px) {
+    .input-container {
+        width: 280px;
+        margin-bottom: 50px;
+
+        &__entry-area {
+            height: 20px;
+        }
+    
+        &__entry {
+            font-size: var(--fs-300);
+        }
+    
+        &__label,
+        &__button {
+            font-size: var(--fs-200);
+        }
+    
+        &__button {
+            margin-top: 100px;
+        }
+    }
+
+    /* icon */
+    .definition-container__icon {
+        transform: scale(0.6);
+    } 
+
+    /* definition */
+    .definition-container__animated-text {
+        font-size: var(--fs-200);
+        letter-spacing: 5px;
+    }
+}
