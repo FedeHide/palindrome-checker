@@ -1,10 +1,18 @@
 {
-  "devDependencies": {
-    "node-sass": "9.0.0",
-    "nodemon": "3.0.3"
-  },
+  "name": "palindrome-checker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "sass src/scss/main.scss dist/css/main.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0",
+    "nodemon": "^3.0.3"
   }
 }
