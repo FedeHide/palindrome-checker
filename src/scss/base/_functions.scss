@@ -1,0 +1,9 @@
+@use 'sass:math';
+
+@function pxToEm($pixel) {
+    @if math.is-unitless($pixel) {
+        @return math.div($pixel, 16) + em;
+    } @else {
+        @error "Don't use units when using the pxToEm() function."
+    }
+}
