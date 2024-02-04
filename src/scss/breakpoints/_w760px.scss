@@ -1,4 +1,6 @@
-@media screen and (max-width: 760px) {
+@use '../base/functions' as f;
+
+@media screen and (max-width: f.pxToEm(760)) {
     /* INPUT SECTION */
     .input-container {
         width: 380px;

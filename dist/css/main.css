@@ -376,7 +376,7 @@ body {
     border-color: var(--clr-error);
   }
 }
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 47.5em) {
   /* INPUT SECTION */
   .input-container {
     width: 380px;
@@ -396,7 +396,7 @@ body {
   /* check button */
   /* DEFINITION-BOX */
 }
-@media screen and (max-width: 760px) and (hover: hover) {
+@media screen and (max-width: 47.5em) and (hover: hover) {
   .button--hover:hover::after {
     left: 101%;
   }
@@ -404,7 +404,7 @@ body {
     transform: skew(20deg, 0deg);
   }
 }
-@media screen and (max-width: 760px) and (hover: none) {
+@media screen and (max-width: 47.5em) and (hover: none) {
   .button--hover:active::after {
     left: 0%;
     background-color: rgba(255, 255, 255, 0.1921568627);
@@ -413,7 +413,7 @@ body {
     transform: skew(20deg, 0deg);
   }
 }
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 47.5em) {
   .definition-container {
     max-width: 380px;
     /* definition */
@@ -430,7 +430,7 @@ body {
     transform: scale(0.8);
   }
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 26.25em) {
   .input-container {
     width: 280px;
     margin-bottom: 50px;
