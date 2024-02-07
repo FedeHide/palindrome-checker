@@ -1,6 +1,6 @@
 {
   "name": "palindrome-checker",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^9.0.0",
-    "nodemon": "^3.0.3"
+    "node-sass": "9.0.0",
+    "nodemon": "3.0.3"
   }
 }
