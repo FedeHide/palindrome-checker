@@ -6,10 +6,10 @@ settings:
 
 devDependencies:
   node-sass:
-    specifier: ^9.0.0
+    specifier: 9.0.0
     version: 9.0.0
   nodemon:
-    specifier: ^3.0.3
+    specifier: 3.0.3
     version: 3.0.3
 
 packages:
