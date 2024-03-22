@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 		icon: '/favicon.ico',
 	},
 	openGraph: {
-		url: 'https://palindrome-checker.vercel.app/',
+		url: 'https://palindrome-checker-eight.vercel.app/',
 		type: 'website',
 		title: 'Palindrome Checker | freeCodeCamp',
 		description: 'This is a Palindrome checker, a freecodecamp assignment',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: 'summary_large_image',
-		site: 'https://palindrome-checker.vercel.app/',
+		site: 'https://palindrome-checker-eight.vercel.app/',
 	},
 }
 
@@ -38,7 +38,7 @@ export default function RootLayout({
 		<html lang="en">
 			<head>
 				<meta name="apple-mobile-web-app-capable" content="yes" />
-				<meta name="apple-mobile-web-app-title" content="Pokemon Search App" />
+				<meta name="apple-mobile-web-app-title" content="Palindrome Checker" />
 				<meta name="apple-mobile-web-app-status-bar-style" content="default" />
 			</head>
 			<body>{children}</body>

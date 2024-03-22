@@ -1,6 +1,6 @@
 # Palindrome Checker | freeCodeCamp
 
-### Check the site [Here](https://fedehide.github.io/palindrome-checker/ " Palindrome Checker")
+### Check the site [Here](https://palindrome-checker-eight.vercel.app/ " Palindrome Checker")
 
 ## Introduction
 This project is a Palindrome checker, a freecodecamp assignment.
