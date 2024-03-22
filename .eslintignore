@@ -1,0 +1,5 @@
+/dist
+*.mjs
+init.js
+next-env.d.ts
+tailwind.config.ts

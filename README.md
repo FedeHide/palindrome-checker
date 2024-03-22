@@ -2,6 +2,16 @@
 
 ### Check the site [Here](https://fedehide.github.io/palindrome-checker/ " Palindrome Checker")
 
+## Introduction
+This project is a Palindrome checker, a freecodecamp assignment.
+
+## Technologies Used
+<div>
+	<a href="https://skillicons.dev">
+		<img src="https://skillicons.dev/icons?i=nextjs,ts,sass" />
+	</a>
+</div>
+
 ------------
 
 [![palindome-checker-ss.png](https://i.postimg.cc/XqZKFdMW/palindome-checker-ss.png)](https://postimg.cc/jnbJYWd3)
