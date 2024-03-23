@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 		title: 'Palindrome Checker | freeCodeCamp',
 		description: 'This is a Palindrome checker, a freecodecamp assignment',
 		images: [
-			'https://opengraph.b-cdn.net/production/documents/3557e93f-f185-430e-836f-77c17cd43cd1.png?token=NNbMPdbiJpmHcEHZpqjh6OMgTaBdNdOXLq1MxAXzf1g&height=342&width=800&expires=33242362729',
+			'https://raw.githubusercontent.com/FedeHide/palindrome-checker/main/public/assets/palindome-checker-ss.webp',
 		],
 	},
 	twitter: {
