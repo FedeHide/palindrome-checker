@@ -1,5 +1,16 @@
 # Changelog
 
+## [v1.0.0](https://github.com/FedeHide/palindrome-checker/releases/tag/v1.0.0) (2024-03-23)
+
+### Features
+
+* **break:** migrate to react/next js ([e5b8bf7](https://github.com/FedeHide/palindrome-checker/commit/e5b8bf7da7f0965ae19f79c726af5cdaee348e92))
+
+* **styles:** Implement Sass function to handle breakpoints ([91f8868](https://github.com/FedeHide/palindrome-checker/commit/91f8868e243f4be82b5cfbfa7f6a116782c11e7d))
+
+* **styles:** add media queries function , px to em ([8132c1d](https://github.com/FedeHide/palindrome-checker/commit/8132c1df34b59ea44f1a46241aa7bc5778c7b68d))
+
+
 ## [v0.1.0](https://github.com/FedeHide/palindrome-checker/releases/tag/v0.1.0) (2024-02-07)
 
 ### Features
