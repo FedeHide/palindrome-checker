@@ -14,7 +14,7 @@ This project is a Palindrome checker, a freecodecamp assignment.
 
 ------------
 
-[![palindome-checker-ss.png](https://i.postimg.cc/XqZKFdMW/palindome-checker-ss.png)](https://postimg.cc/jnbJYWd3)
+[![palindome-checker-ss.png](https://i.postimg.cc/XqZKFdMW/palindome-checker-ss.png)](https://palindrome-checker-eight.vercel.app/)
 
 ## Features
 
